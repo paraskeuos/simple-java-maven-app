@@ -24,6 +24,7 @@
     <sonar.exclusions>pom.xml</sonar.exclusions>
     <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
     <sonar.language>java</sonar.language>
+    <sonar.coverage.xmlReportPaths>target/site/jacoco/jacoco.xml</sonar.coverage.xmlReportPaths>
   </properties>
   <build>
     <pluginManagement>
