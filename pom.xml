@@ -24,7 +24,6 @@
     <sonar.exclusions>pom.xml</sonar.exclusions>
     <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
     <sonar.language>java</sonar.language>
-    <sonar.coverage.jacoco.xmlReportPaths>**/target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
   </properties>
   <build>
     <pluginManagement>
@@ -78,7 +77,13 @@
         <version>0.8.8</version>
         <executions>
           <execution>
-            <id>default-report</id>
+      	    <id>prepare-agent</id>
+            <goals>
+             <goal>prepare-agent</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>report</id>
             <goals>
               <goal>report</goal>
             </goals>
